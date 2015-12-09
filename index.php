@@ -5,12 +5,11 @@ session_start();
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-<meta name="Copyright" content="60IE.NET CopyRight 2013" />
-<title>phpÎŞÊı¾İ¿âÎÄ±¾ÁôÑÔ±¾V0.02</title>
+<title>Powercnäººå‘˜å­¦å†ç»Ÿè®¡</title>
 <style type="text/css">
 <!--
 body,td,th {
-	font-family: ËÎÌå;
+	font-family: å®‹ä½“;
 	font-size: 9pt;
 	color: #222;
 }
@@ -42,7 +41,7 @@ a:active {
 </style>
 <script>
     function del(id){
-		if(confirm("È·¶¨ÒªÉ¾³ıÂğ£¿")){
+		if(confirm("ç¡®å®šè¦åˆ é™¤å—ï¼Ÿ")){
 			window.location='?id='+id;
 			}
 		}
@@ -53,19 +52,19 @@ a:active {
 
 	if (myform.title.value.length<2)
 	{
-		alert("±êÌâ²»ÄÜÉÙÓÚ2¸ö×Ö·û");
+		alert("å·¥å·ä¸èƒ½å°‘äº2ä¸ªå­—ç¬¦");
 		myform.title.focus();
 		return false;
 	}
 	if (myform.name.value=="")
 	{
-		alert("êÇ³Æ²»ÄÜÎª¿Õ");
+		alert("å§“åä¸èƒ½ä¸ºç©º");
 		myform.name.focus();
 		return false;
 	}
 	if (myform.content.value.length<10)
 	{
-		alert("ÄÚÈİ²»ÄÜÉÙÓÚ10¸ö×Ö·û");
+		alert("å†…å®¹ä¸èƒ½å°‘äº10ä¸ªå­—ç¬¦");
 		myform.content.focus();
 		return false;
 	}
@@ -75,15 +74,15 @@ a:active {
 if($_POST['submit5']){
 if($_POST['pwd']=="123"){
 $_SESSION['pwd']=$_POST['pwd'];
-echo "<script language=javascript>alert('µÇÂ½³É¹¦£¡');window.location='index.php'</script>";
+echo "<script language=javascript>alert('ç™»é™†æˆåŠŸï¼');window.location='index.php'</script>";
 }
   }
 ?>
 <?php
 	if($_GET['tj'] == 'logout'){
-	session_start(); //¿ªÆôsession
-	session_destroy();  //×¢Ïúsession
-	header("location:index.php"); //Ìø×ªµ½Ê×Ò³
+	session_start(); //å¼€å¯session
+	session_destroy();  //æ³¨é”€session
+	header("location:index.php"); //è·³è½¬åˆ°é¦–é¡µ
 	}
 ?>
 <?php
@@ -93,7 +92,7 @@ $info = file_get_contents("info.txt");
 $column = explode("@@@",$info); unset($column[$id]);
 $noinfo = implode("@@@",$column);
     file_put_contents("info.txt",$noinfo);
-	echo "<script language=javascript>alert('É¾³ı³É¹¦£¡');window.location='index.php'</script>";
+	echo "<script language=javascript>alert('åˆ é™¤æˆåŠŸï¼');window.location='index.php'</script>";
 }
 ?>
 </head>
@@ -101,8 +100,8 @@ $noinfo = implode("@@@",$column);
 <form  name="myform" method="post" onSubmit="return CheckPost()" action="" style="margin-bottom:5px;">
 <table width="550" border="0" align="center" cellpadding="5" cellspacing="1" bgcolor="#B3B3B3">
   <tr>
-    <td height="25" align="center" bgcolor="#EBEBEB"><a href="index.php">²é¿´ÁôÑÔ</a>&nbsp;|&nbsp;<a href="index.php?tj=add">Ìí¼ÓÁôÑÔ</a>&nbsp;|&nbsp;<a href="index.php?tj=login">ÁôÑÔ¹ÜÀí</a>&nbsp;|&nbsp;<?php if($_SESSION['pwd']<>''){
-echo "<a href='index.php?tj=logout'>ÍË³ö¹ÜÀí</a>"; 
+    <td height="25" align="center" bgcolor="#EBEBEB"><a href="index.php">æŸ¥çœ‹ç•™è¨€</a>&nbsp;|&nbsp;<a href="index.php?tj=add">æ·»åŠ ç•™è¨€</a>&nbsp;|&nbsp;<a href="index.php?tj=login">ç•™è¨€ç®¡ç†</a>&nbsp;|&nbsp;<?php if($_SESSION['pwd']<>''){
+echo "<a href='index.php?tj=logout'>é€€å‡ºç®¡ç†</a>"; 
 }?></td>
   </tr>
 </table>
@@ -115,13 +114,13 @@ echo "<a href='index.php?tj=logout'>ÍË³ö¹ÜÀí</a>";
 
 <table width="550" border="0" align="center" cellpadding="5" cellspacing="1" bgcolor="#B3B3B3">
 <tr>
-<th width="60" bgcolor="#EBEBEB">ÁôÑÔ±íÇé</th>
-<th width="76" bgcolor="#EBEBEB">ÁôÑÔ±êÌâ</th>
-<th width="77" bgcolor="#EBEBEB">ÍøÓÑêÇ³Æ</th>
-<th width="133" bgcolor="#EBEBEB">ÁôÑÔÄÚÈİ</th>
-<th width="78" bgcolor="#EBEBEB">ÁôÑÔÊ±¼ä</th>
+<th width="60" bgcolor="#EBEBEB">è¡¨æƒ…</th>
+<th width="76" bgcolor="#EBEBEB">å·¥å·</th>
+<th width="77" bgcolor="#EBEBEB">å§“å</th>
+<th width="133" bgcolor="#EBEBEB">æ˜¯å¦å¯ä»¥å¯„å‡ºå­¦å†è¯ä¹¦åŠå¯„å‡ºæ—¶é—´</th>
+<th width="78" bgcolor="#EBEBEB">æ—¶é—´</th>
 <?php if($_SESSION['pwd']<>''){
-echo "<th width='59' bgcolor='#EBEBEB'>²Ù×÷</th>";
+echo "<th width='59' bgcolor='#EBEBEB'>æ“ä½œ</th>";
 }?>
 </tr>
 <?php
@@ -142,7 +141,7 @@ $message = explode("%%",$values);
 <td align="center" bgcolor="#FFFFFF"><?php echo date("m/d H:i",$message[4]);?></th>
 <?php if($_SESSION['pwd']<>''){
 echo "<td align='center' bgcolor='#FFFFFF'>";
-echo "<a href='javascript:del({$keys})'>É¾³ı</a>"; 
+echo "<a href='javascript:del({$keys})'>åˆ é™¤</a>"; 
 echo "</th>";
 }?>
 </tr>
@@ -170,7 +169,7 @@ $addtime = time();
 $insert = "{$title}%%{$name}%%{$face}%%{$content}%%{$addtime}@@@";
 $content = file_get_contents("info.txt");
            file_put_contents("info.txt",$content.$insert);
-		   echo "<script language=javascript>alert('ÁôÑÔ³É¹¦£¡');window.location='index.php'</script>";
+		   echo "<script language=javascript>alert('ç•™è¨€æˆåŠŸï¼');window.location='index.php'</script>";
 	}
 ?>
   <table width="100%" border="0" cellpadding="0" cellspacing="0">
@@ -180,17 +179,17 @@ $content = file_get_contents("info.txt");
   </table>
   <table width="550" border="0" align="center" cellpadding="5" cellspacing="1" bgcolor="#B3B3B3" brder="1">
 <tr>
-    <td width="62" align="center" bgcolor="#FFFFFF">ÁôÑÔ±êÌâ£º</td>
+    <td width="62" align="center" bgcolor="#FFFFFF">å·¥å·ï¼š</td>
     <td width="465" bgcolor="#FFFFFF"><input type="text" name="title"/>
       &nbsp;*</td>
 </tr>
 <tr>
-     <td align="center" bgcolor="#FFFFFF">ÍøÓÑêÇ³Æ£º</td>
+     <td align="center" bgcolor="#FFFFFF">å§“åï¼š</td>
      <td bgcolor="#FFFFFF"><input name="name" type="text" id="name"/> 
        &nbsp;*</td>    
 </tr>
 <tr>
-  <td align="center" bgcolor="#FFFFFF">ÍøÓÑ±íÇé£º</td>
+  <td align="center" bgcolor="#FFFFFF">è¡¨æƒ…ï¼š</td>
   <td bgcolor="#FFFFFF"><input type="radio" value="1" name="face" checked="checked" />
                             <img src="face/PIC1.GIF" width="20" height="20" border="0" />
                             <input type="radio" value="2" name="face" />
@@ -207,14 +206,14 @@ $content = file_get_contents("info.txt");
                             <img src="face/PIC7.GIF" width="20" height="20" border="0" /></td>
 </tr>
 <tr>
-     <td align="center" bgcolor="#FFFFFF">ÁôÑÔÄÚÈİ£º</td>
+     <td align="center" bgcolor="#FFFFFF">å†…å®¹ï¼ˆèƒ½å¦å¯„å‡ºã€å¯„å‡ºæ—¶é—´ï¼‰ï¼š</td>
      <td bgcolor="#FFFFFF"><textarea name="content" rows="5" cols="40"></textarea>
-      &nbsp;²»ÄÜÉÙÓÚ10¸ö×Ö·û</td>
+      &nbsp;ä¸èƒ½å°‘äº10ä¸ªå­—ç¬¦</td>
 </tr>
 <tr>
       <td colspan="2" align="center" bgcolor="#FFFFFF">
-        <input name="submit" type="submit"value="Ìá½»" />&nbsp;&nbsp; 
-        <input name="reset" type="reset"  value="ÖØÌî"/>      </td>
+        <input name="submit" type="submit"value="æäº¤" />&nbsp;&nbsp; 
+        <input name="reset" type="reset"  value="é‡å¡«"/>      </td>
     </tr>
 </table>
 </form>
@@ -225,18 +224,18 @@ $content = file_get_contents("info.txt");
 <form  name="form" method="post" action="" style=" margin-top:5px;">
  <table width="550" border="0" align="center" cellpadding="5" cellspacing="1" bgcolor="#B3B3B3">
   <tr>
-    <td colspan="3" align="center" bgcolor="#EBEBEB" class="font">ºóÌ¨¹ÜÀíÒ³</td>
+    <td colspan="3" align="center" bgcolor="#EBEBEB" class="font">åå°ç®¡ç†é¡µ</td>
     </tr>
   <tr>
-    <td width="89" align="center" bgcolor="#FFFFFF" class="font">¹ÜÀíÃÜÂë:</td>
+    <td width="89" align="center" bgcolor="#FFFFFF" class="font">ç®¡ç†å¯†ç :</td>
     <td colspan="2" bgcolor="#FFFFFF" class="font">
       <input name="pwd" type="text" id="pwd" size="16"/></td>
     </tr>
     <tr>
     <td colspan="3" align="center" valign="top" bgcolor="#FFFFFF" class="font">
-    <input type="submit" name="submit5" value="µÇÂ¼" />
+    <input type="submit" name="submit5" value="ç™»å½•" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input type="submit" name="reset"  value="ÖØÖÃ" /></td>
+<input type="submit" name="reset"  value="é‡ç½®" /></td>
     </tr>
 </table>
  <table width="100" border="0" align="center" cellpadding="0" cellspacing="0">
@@ -246,7 +245,7 @@ $content = file_get_contents("info.txt");
  </table>
  <table width="550" border="0" align="center" cellpadding="5" cellspacing="1" bgcolor="#B3B3B3">
    <tr>
-     <td bgcolor="#FFFFFF">×îĞÂ°æ±¾ÌáĞÑ:<!--É¾³ıºó½«ÎŞ·¨»ñµÃ×îĞÂ°æ±¾-->phpÎŞÊı¾İ¿âÎÄ±¾ÁôÑÔ±¾V0.02
+     <td bgcolor="#FFFFFF">æœ€æ–°ç‰ˆæœ¬æé†’:<!--åˆ é™¤åå°†æ— æ³•è·å¾—æœ€æ–°ç‰ˆæœ¬-->phpæ— æ•°æ®åº“æ–‡æœ¬ç•™è¨€æœ¬V0.02
       <script type="text/javascript" src="http://www.60ie.net/wap/txtlyb.js"></script></td>
    </tr>
  </table>
@@ -255,7 +254,7 @@ $content = file_get_contents("info.txt");
 <table width="550" height="20" border="0" align="center" cellpadding="5" cellspacing="1" bgcolor="#CCCCCC">
   <tr>
     <td align="left" bgcolor="#FFFFFF">&nbsp;Copyright @2013 <a href="http://www.60ie.net/article/6/486.html" target="_blank">
-      <!--±¾Ô´ÂëÃâ·Ñ¿ªÔ´£¬±£Áô°æÈ¨ĞÅÏ¢Äã½«»ñµÃ±¾Õ¾Ãâ·Ñ¼¼ÊõÖ§³ÖºÍ³ÌĞòÉı¼¶·şÎñ¡£-->
+      <!--æœ¬æºç å…è´¹å¼€æºï¼Œä¿ç•™ç‰ˆæƒä¿¡æ¯ä½ å°†è·å¾—æœ¬ç«™å…è´¹æŠ€æœ¯æ”¯æŒå’Œç¨‹åºå‡çº§æœåŠ¡ã€‚-->
       60IE.NET</a> All Rights Reserved. Build V0.02</td>
   </tr>
 </table>
